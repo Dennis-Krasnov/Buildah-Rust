@@ -2,8 +2,14 @@
 
 [package]
 name = "buildah-rs"
+description = "Wrapper around the Buildah CLI tool. For people who prefer Rust over Bash."
+keywords = ["buildah", "container", "oci", "dockerfile"]
+categories = ["api-bindings", "development-tools"]
+homepage = "https://github.com/Dennis-Krasnov/Buildah-Rust"
+repository = "https://github.com/Dennis-Krasnov/Buildah-Rust"
 version = "0.1.0"
 authors = ["Dennis Krasnov <dennis@krasnov.dev>"]
+license = "Apache-2.0"
 edition = "2018"
 
 [dependencies]

@@ -37,3 +37,15 @@ podman run --rm -it -p 8080:80 nginx_bash
 [] The trait `std::error::Error` is not implemented for `BuildahError`
 
 [] Example with chrome tracing
+
+[] https://rust-lang.github.io/api-guidelines/checklist.html
+
+## License
+
+Licensed under Apache License, Version 2.0.
+
+#### Contribution
+
+Unless you explicitly state otherwise, any contribution intentionally submitted
+for inclusion in the work by you, as defined in the Apache-2.0 license, shall be
+licensed as above, without any additional terms or conditions.
