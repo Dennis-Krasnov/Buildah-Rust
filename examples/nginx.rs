@@ -1,5 +1,4 @@
-use buildah::container::Container;
-use std::error;
+use buildah_rs::container::Container;
 
 fn main() {
     let mut container = Container::from("nginx:1.21");
