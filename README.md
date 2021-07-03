@@ -7,20 +7,22 @@ For more advanced use cases, use the buildah Go library itself.
 ## Example
 ```shell
 cd examples
-buildah images
-
-# nginx_dockerfile
-buildah bud -f nginx_dockerfile -t nginx_bud .
-podman run --rm -it -p 8080:80 nginx_bud
  
-# Buildah rust
+# Buildah Rust
 cargo run --example nginx
 podman run --rm -it -p 8080:80 nginx_rust
 
-# Buildah Rust
+# Buildah dockerfile
+buildah bud -f nginx_dockerfile -t nginx_bud .
+podman run --rm -it -p 8080:80 nginx_bud
+
+# Buildah Bash
 chmod u+x nginx.sh
 ./nginx.sh
 podman run --rm -it -p 8080:80 nginx_bash
+
+# Check that it worked:
+buildah images
 ```
 
 ## TODO
