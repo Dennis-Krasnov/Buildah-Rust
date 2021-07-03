@@ -16,10 +16,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
         
-    - name: Build
+    - name: Build Rust binary
       run: cargo build --verbose
       
-    - name: Run tests
+    - name: Run Rust tests
       run: cargo test --verbose
       
   publish:

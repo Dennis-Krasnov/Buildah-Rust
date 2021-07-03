@@ -42,6 +42,8 @@ buildah images
 
 [] https://rust-lang.github.io/api-guidelines/checklist.html
 
+[] https://blog.guillaume-gomez.fr/articles/2020-03-12+Guide+on+how+to+write+documentation+for+a+Rust+crate
+
 ## License
 
 Licensed under Apache License, Version 2.0.
