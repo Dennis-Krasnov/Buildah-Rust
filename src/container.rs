@@ -106,6 +106,7 @@ impl Container {
     }
 
     /// Mount working container's root filesystem.
+    /// Unprivileged users must run with `buildah unshare`.
     pub fn mount(&mut self) -> Mount {
         Mount::new(&self.name).unwrap() // TODO: add try_mount? Buildah("cannot mount using driver overlay in rootless mode. You need to run it in a `buildah unshare` session")',
     }

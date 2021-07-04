@@ -1,8 +1,10 @@
 use std::fmt;
 use std::fmt::{Display, Formatter};
+use std::process::{Output, Command};
+use crate::buildah_error::BuildahError;
 
 /// ...
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Image(String);
 
 /// ...
@@ -24,6 +26,16 @@ impl Image {
             (None, Some(tag)) => format!("{}:{}", name, tag),
             (None, None) => format!("{}", name),
         })
+    }
+
+    /// Push an image, manifest list or image index from local storage to elsewhere.
+    /// Currently equivalent to docker push command. Missing lots of options.
+    pub fn push(&self) -> Result<Output, BuildahError> {
+        Command::new("buildah")
+            .arg("push")
+            .arg(self.to_string())
+            .output()
+            .map_err(BuildahError::from)
     }
 
     // TODO: pull command

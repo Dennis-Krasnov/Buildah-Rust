@@ -44,6 +44,12 @@ buildah images
 
 [] https://blog.guillaume-gomez.fr/articles/2020-03-12+Guide+on+how+to+write+documentation+for+a+Rust+crate
 
+[] write docs on how to run this on a macos/windows machine
+//  1) locally, `cargo build --release --package build_oci_images`
+//  2) docker run --rm -v "$PWD":/app -w /app -e IMAGE_TAG=latest buildah/buildah buildah unshare target/release/build_oci_images
+//  https://insujang.github.io/2020-11-09/building-container-image-inside-container-using-buildah/
+//  https://developers.redhat.com/blog/2019/08/14/best-practices-for-running-buildah-in-a-container#running_buildah_inside_a_container
+
 ## License
 
 Licensed under Apache License, Version 2.0.
