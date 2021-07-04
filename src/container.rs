@@ -56,7 +56,7 @@ impl Container {
 
     /// Typed implementation of [`config`] method...
     pub fn config_port(&mut self, port: u16) -> Result<(), BuildahError> {
-        self.config("cmd", &port.to_string())
+        self.config("port", &port.to_string())
     }
 
     /// Update image configuration settings.
